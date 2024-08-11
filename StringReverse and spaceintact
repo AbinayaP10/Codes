@@ -1,0 +1,21 @@
+import java.util.*;
+class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        char[] ch=str.tocharArray();
+        int i,j;
+        for( i=0,j=str.length()-1;i<=j;i++,j--)
+        {
+
+           char temp=ch[i];
+           ch[i]=ch[j];
+           ch[j]=temp;
+        }
+        String res=ch.toString();
+        System.out.print(res);
+
+    }
+}
