@@ -1,0 +1,20 @@
+import java.util.*;
+class main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Stack stack=new Stack();
+        int n1;
+        while(true){
+            n1=sc.nextInt();
+            if(n1==-1)
+                break;
+            stack.push(n1);
+        }
+        stack.pop();
+        System.out.println(stack.peek());
+        if(stack.isEmpty())
+            System.out.println("Stack is empty");
+        else
+            System.out.println("Stack is not empty");
+    }
+}
