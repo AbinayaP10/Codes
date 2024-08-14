@@ -1,0 +1,16 @@
+import java.util.*;
+class main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Vector vc=new Vector();
+        int num;
+        while(true)
+        {
+            num=sc.nextInt();
+            if(num==-1)
+                break;
+            vc.add(num);
+        }
+        System.out.println(vc.size());
+    }
+}
