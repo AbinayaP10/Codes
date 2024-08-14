@@ -1,0 +1,25 @@
+import java.util.*;
+class main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Vector<Integer> vc1=new Vector<>();
+        Vector <Integer> vc2=new Vector<>();
+        int n1,n2;
+        while(true){
+            n1=sc.nextInt();
+            if(n1==-1)
+                break;
+            vc1.add(n1);
+        }
+        System.out.println("Vector 1:"+vc1);
+        while(true){
+            n2=sc.nextInt();
+            if(n2==-1)
+                break;
+            vc2.add(n2);
+        }
+        System.out.println("Vector 2:"+vc2);
+        vc1.addAll(vc2);
+        System.out.println(vc1);
+    }
+}
