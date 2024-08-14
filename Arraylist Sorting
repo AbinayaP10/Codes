@@ -1,0 +1,24 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> list=new ArrayList<Integer>();
+        Scanner sc = new Scanner(System.in);
+        int num;
+        while (true) {
+            num = sc.nextInt();
+            if (num == -1)
+                break;
+            list.add(num);
+        }
+       for(int i=0;i<list.size();i++){
+            for(int j=i+1;j<list.size();j++){
+                if(list.get(i) > list.get(j)) {
+                    int temp=list.get(j);
+                    list.get(j)=list.get(i);
+                    list.get(i)=temp;
+                }
+            }
+        }
+        System.out.print(list);
+    }
+}
