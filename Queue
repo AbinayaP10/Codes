@@ -1,0 +1,46 @@
+class Main{
+    int s [] = new int[5];
+    int front;
+    int rear;
+
+    Main(){
+        front = -1;
+        rear=-1;
+    }
+    void enqueue(int val){
+        if(rear==5-1) {
+            System.out.println("full");
+        }
+        else {
+            s[++rear] = val;
+            if (front == -1) {
+                front++;
+            }
+        }
+    }
+    int dequeue()
+    {
+        if(front==-1)
+            System.out.print("Empty");
+        return s[front++];
+    }
+    void display(){
+        for(int i =front;i<rear+1;i++){
+            System.out.print(s[i]+ " ");
+        }
+    }
+    public static void main(String args[]){
+
+        Main a1 = new Main();
+
+        a1.enqueue(10);
+        a1.enqueue(20);
+        a1.enqueue(30);
+        a1.enqueue(40);
+        a1.enqueue(50);
+        a1.display();
+        System.out.println();
+        a1.dequeue();
+        a1.display();
+    }
+}
