@@ -1,0 +1,28 @@
+import java.util.*;
+class main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer> list1=new ArrayList<Integer>();
+        ArrayList<Integer>list2=new ArrayList<>();
+        int num1,num2;
+        while(true){
+            num1=sc.nextInt();
+            if(num1==-1)
+                break;
+            list1.add(num1);
+        }
+        System.out.println(" list 1 :"+list1);
+        while(true){
+            num2=sc.nextInt();
+            if(num2==-1)
+                break;
+            list2.add(num2);
+        }
+        System.out.println("list 2 :"+list2);
+        list1.clear();
+        list1.addAll(list2);
+        System.out.println(list1);
+        System.out.println(list2);
+
+    }
+}
