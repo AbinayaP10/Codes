@@ -1,0 +1,20 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Vector vc=new Vector();
+        int num;
+        while(true)
+        {
+            num=sc.nextInt();
+            if(num==-1)
+                break;
+            vc.add(num);
+        }
+        System.out.println(vc);
+        int index=sc.nextInt();
+        int num2=sc.nextInt();
+        vc.add(index,num2);
+        System.out.println(vc);
+    }
+}
